@@ -404,6 +404,82 @@
             text-align: left;
         }
 
+        /* How It Works Section */
+        .how-it-works {
+            padding: 100px 0;
+            background: var(--gray-100);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .how-it-works::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgba(10, 92, 54, 0.08);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 20px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-card {
+            grid-column: span 2;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .step-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(10, 92, 54, 0.1);
+        }
+
+        .step-number {
+            font-family: 'Merriweather', serif;
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            opacity: 0.3;
+        }
+
+        .step-title {
+            font-family: 'Merriweather', serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--black);
+        }
+
+        .step-description {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .step-arrow {
+            grid-column: span 1;
+            text-align: center;
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
         /* Features Section */
         .features {
             padding: 100px 0;
@@ -551,6 +627,77 @@
             font-size: 15px;
         }
 
+        /* Validator Benefits Section */
+        .validator-benefits {
+            padding: 100px 0;
+            background: var(--gray-100);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .validator-benefits::after {
+            content: '';
+            position: absolute;
+            bottom: 10%;
+            left: -150px;
+            width: 400px;
+            height: 400px;
+            background: rgba(10, 92, 54, 0.04);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            padding: 40px;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .benefit-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(10, 92, 54, 0.1);
+        }
+
+        .benefit-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .benefit-title {
+            font-family: 'Merriweather', serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--black);
+        }
+
+        .benefit-description {
+            color: var(--gray-600);
+            line-height: 1.7;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .benefit-highlight {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 10px 15px;
+            background: rgba(10, 92, 54, 0.05);
+            border-radius: 4px;
+        }
+
         /* Comparison Section */
         .comparison {
             padding: 100px 0;
@@ -634,6 +781,39 @@
             color: var(--black);
         }
 
+        /* MEVity Sol 열 하이라이트 */
+        .comparison-table th:nth-child(4) {
+            background: var(--primary-color);
+            color: var(--white);
+            position: relative;
+        }
+
+        .comparison-table th:nth-child(4)::after {
+            content: '⭐ Our Solution';
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 5px;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .comparison-table td:nth-child(4) {
+            background: rgba(10, 92, 54, 0.05);
+            font-weight: 600;
+            border-left: 3px solid var(--primary-color);
+            border-right: 3px solid var(--primary-color);
+        }
+
+        .comparison-table tr:last-child td:nth-child(4) {
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .comparison-table tr:first-child td:nth-child(4) {
+            border-top: 3px solid var(--primary-color);
+        }
+
         .comparison-table td {
             padding: 20px 25px;
             border-bottom: 1px solid var(--gray-200);
@@ -658,6 +838,62 @@
         }
 
         /* Team Section */
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .faq::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border: 2px dashed rgba(10, 92, 54, 0.1);
+            transform: translateY(-50%) rotate(45deg);
+            pointer-events: none;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            padding: 35px;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .faq-item:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(10, 92, 54, 0.08);
+        }
+
+        .faq-question {
+            font-family: 'Merriweather', serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--black);
+        }
+
+        .faq-answer {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
         /* CTA Section */
         .cta-section {
             padding: 100px 0;
@@ -816,8 +1052,21 @@
                 font-size: 36px;
             }
 
-            .features-grid {
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step-arrow {
+                display: none;
+            }
+
+            .features-grid,
+            .benefits-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -843,7 +1092,17 @@
                 font-size: 15px;
             }
 
-            .features-grid {
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step-arrow {
+                display: none;
+            }
+
+            .features-grid,
+            .benefits-grid,
+            .faq-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -869,7 +1128,9 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="#features">Features</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
                     <li><a href="#comparison">Compare</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -900,6 +1161,48 @@
                     engine that puts validators first—democratizing MEV opportunities through transparent transaction pools, removing searcher entry barriers, 
                     and driving competitive bidding that maximizes validator tips.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">How It Works</div>
+                <h2 class="section-title">Simple, Transparent Process</h2>
+                <p class="section-description">Five steps to maximize your validator revenue through open competition</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Open Mempool Streaming</h3>
+                    <p class="step-description">Transactions from validators running MEVity client are streamed to searchers in real-time</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Searcher Competition</h3>
+                    <p class="step-description">Multiple searchers compete to capture MEV opportunities and submit bundles</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Highest Bid Auction</h3>
+                    <p class="step-description">Searchers bid tips to validators for bundle inclusion; highest tip wins</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Atomic Execution</h3>
+                    <p class="step-description">Selected bundle executes atomically within 200ms slot window</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card">
+                    <div class="step-number">05</div>
+                    <h3 class="step-title">Validator Revenue</h3>
+                    <p class="step-description">Competitive bidding drives tips up, maximizing validator revenue by 60%+</p>
+                </div>
             </div>
         </div>
     </section>
@@ -942,6 +1245,55 @@
                     <div class="feature-icon">🚀</div>
                     <div class="feature-title">Proven Model</div>
                     <p class="feature-description">Based on Ethereum MEV-Boost architecture that delivered 60%+ revenue increases and 96% adoption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Validator Benefits Section -->
+    <section class="validator-benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Validator Benefits</div>
+                <h2 class="section-title">Why Validators Choose MEVity Sol</h2>
+                <p class="section-description">Maximize your earnings while maintaining full control</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h3 class="benefit-title">60%+ Revenue Increase</h3>
+                    <p class="benefit-description">Proven MEV-Boost model delivers significantly higher returns through competitive searcher bidding. Ethereum validators saw average 60%+ revenue increases.</p>
+                    <div class="benefit-highlight">Conservative: +30% | Base: +60% | Optimistic: +100%</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔓</div>
+                    <h3 class="benefit-title">Full Transparency</h3>
+                    <p class="benefit-description">Open auction model with on-chain verification. No TEE black boxes—every transaction and tip is publicly auditable and verifiable.</p>
+                    <div class="benefit-highlight">100% open source from day one</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3 class="benefit-title">Lower Fees</h3>
+                    <p class="benefit-description">5% protocol fee vs Jito/BAM's 6%. More revenue stays with validators and searchers, making the ecosystem more competitive.</p>
+                    <div class="benefit-highlight">Save 1% on every transaction</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3 class="benefit-title">Retain Authority</h3>
+                    <p class="benefit-description">Unlike BAM, validators keep bundle selection rights. You decide which bundles to include—you're not demoted to an executor role.</p>
+                    <div class="benefit-highlight">Your node, your choice</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌐</div>
+                    <h3 class="benefit-title">Open Competition</h3>
+                    <p class="benefit-description">Any searcher can participate with just an API key. More searchers means more competition, driving tips higher for validators.</p>
+                    <div class="benefit-highlight">No capital barriers to entry</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔒</div>
+                    <h3 class="benefit-title">Battle-Tested Security</h3>
+                    <p class="benefit-description">Built on Jito-Solana fork with atomic bundle execution. Comprehensive security audits ensure validator and user fund safety.</p>
+                    <div class="benefit-highlight">Enterprise-grade security</div>
                 </div>
             </div>
         </div>
@@ -1020,15 +1372,52 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">FAQ</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">Everything you need to know about MEVity Sol</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 class="faq-question">How is MEVity Sol different from Jito/BAM?</h3>
+                    <p class="faq-answer">MEVity Sol maintains an open mempool with transparent auctions, while Jito closed theirs and BAM uses TEE privacy. We prioritize validator revenue and authority—you're not demoted to an executor. Our 5% fee is lower than their 6%, and we're fully open source from day one.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How do validators join MEVity Sol?</h3>
+                    <p class="faq-answer">Simply install the MEVity Validator Client (a Jito-Solana fork) and connect to our Block Engine. No minimum stake required. Your node will start receiving competitive bids from multiple searchers immediately, with tips flowing directly to your validator account.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What are the fees?</h3>
+                    <p class="faq-answer">5% protocol tip fee (vs Jito's 6%) plus 6% MEV revenue fee split between searchers and validators (3% each). Validators keep 97% of tips net of protocol fees, with no hidden charges or additional costs.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Is MEVity Sol secure?</h3>
+                    <p class="faq-answer">Yes. We use atomic bundle execution to guarantee all-or-nothing transactions, preventing partial execution failures. Built on the battle-tested Jito-Solana codebase with comprehensive security audits. All code is open source for community verification.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">How much revenue increase can I expect?</h3>
+                    <p class="faq-answer">Based on Ethereum MEV-Boost results and Solana private mempool data, validators can expect 30-100%+ revenue increases. Conservative estimates show +30%, base case +60%, optimistic +100%. More searchers means higher competition and tips.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">What about user protection from sandwich attacks?</h3>
+                    <p class="faq-answer">We offer optional user protection through private RPC endpoints and slippage controls. MEV cannot be eliminated—we believe transparency and choice are better than closed systems where MEV still exists but benefits only a few.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="container">
             <div class="cta-box">
-                <h2>Join the Open MEV Revolution</h2>
+                <h2>Join the Open MEV client</h2>
                 <p>Be part of the validator-first block engine that's redefining Solana MEV</p>
-                <div class="cta-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="50393e363f103d35263924297e393f">[email&#160;protected]</a></div>
+                <div class="cta-email">info@mevity.io</div>
                 <div class="cta-buttons">
-                    <a href="/cdn-cgi/l/info@mevity.io#9bf2f5fdf4dbf6feedf2efe2b5f2f4" class="btn btn-primary">Get in Touch</a>
+                    <a href="mailto:info@mevity.io" class="btn btn-primary">Get in Touch</a>
                 </div>
             </div>
         </div>
@@ -1080,7 +1469,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.feature-card').forEach(card => {
+        document.querySelectorAll('.feature-card, .step-card, .benefit-card, .faq-item').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
