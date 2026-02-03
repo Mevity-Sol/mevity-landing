@@ -405,81 +405,6 @@
         }
 
         /* How It Works Section */
-        .how-it-works {
-            padding: 100px 0;
-            background: var(--gray-100);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .how-it-works::before {
-            content: '';
-            position: absolute;
-            top: 20%;
-            right: -100px;
-            width: 300px;
-            height: 300px;
-            border: 2px solid rgba(10, 92, 54, 0.08);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(9, 1fr);
-            gap: 20px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .step-card {
-            grid-column: span 2;
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        }
-
-        .step-card:hover {
-            border-color: var(--primary-color);
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(10, 92, 54, 0.1);
-        }
-
-        .step-number {
-            font-family: 'Merriweather', serif;
-            font-size: 36px;
-            font-weight: 900;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            opacity: 0.3;
-        }
-
-        .step-title {
-            font-family: 'Merriweather', serif;
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: var(--black);
-        }
-
-        .step-description {
-            font-size: 14px;
-            color: var(--gray-600);
-            line-height: 1.6;
-        }
-
-        .step-arrow {
-            grid-column: span 1;
-            text-align: center;
-            font-size: 24px;
-            color: var(--primary-color);
-            font-weight: 700;
-        }
-
         /* Features Section */
         .features {
             padding: 100px 0;
@@ -927,14 +852,6 @@
                 font-size: 36px;
             }
 
-            .steps-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .step-arrow {
-                display: none;
-            }
-
             .features-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -960,14 +877,6 @@
             .what-we-do-description,
             .what-we-do-highlight {
                 font-size: 15px;
-            }
-
-            .steps-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .step-arrow {
-                display: none;
             }
 
             .features-grid {
@@ -1027,48 +936,6 @@
                     engine that puts validators first—democratizing MEV opportunities through transparent transaction pools, removing searcher entry barriers, 
                     and driving competitive bidding that maximizes validator tips.
                 </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">How It Works</div>
-                <h2 class="section-title">Simple, Transparent Process</h2>
-                <p class="section-description">Five steps to maximize your validator revenue through open competition</p>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">01</div>
-                    <h3 class="step-title">Open Mempool Streaming</h3>
-                    <p class="step-description">Transactions from validators running MEVity client are streamed to searchers in real-time</p>
-                </div>
-                <div class="step-arrow">→</div>
-                <div class="step-card">
-                    <div class="step-number">02</div>
-                    <h3 class="step-title">Searcher Competition</h3>
-                    <p class="step-description">Multiple searchers compete to capture MEV opportunities and submit bundles</p>
-                </div>
-                <div class="step-arrow">→</div>
-                <div class="step-card">
-                    <div class="step-number">03</div>
-                    <h3 class="step-title">Highest Bid Auction</h3>
-                    <p class="step-description">Searchers bid tips to validators for bundle inclusion; highest tip wins</p>
-                </div>
-                <div class="step-arrow">→</div>
-                <div class="step-card">
-                    <div class="step-number">04</div>
-                    <h3 class="step-title">Atomic Execution</h3>
-                    <p class="step-description">Selected bundle executes atomically within 200ms slot window</p>
-                </div>
-                <div class="step-arrow">→</div>
-                <div class="step-card">
-                    <div class="step-number">05</div>
-                    <h3 class="step-title">Validator Revenue</h3>
-                    <p class="step-description">Competitive bidding drives tips up, maximizing validator revenue by 60%+</p>
-                </div>
             </div>
         </div>
     </section>
@@ -1195,9 +1062,9 @@
             <div class="cta-box">
                 <h2>Join the Open MEV client</h2>
                 <p>Be part of the validator-first block engine that's redefining Solana MEV</p>
-                <div class="cta-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3e575058517e535b48574a47105751">[email&#160;protected]</a></div>
+                <div class="cta-email">info@mevity.io</div>
                 <div class="cta-buttons">
-                    <a href="/cdn-cgi/l/email-protection#a0c9cec6cfe0cdc5d6c9d4d98ec9cf" class="btn btn-primary">Get in Touch</a>
+                    <a href="mailto:info@mevity.io" class="btn btn-primary">Get in Touch</a>
                 </div>
             </div>
         </div>
@@ -1249,7 +1116,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.feature-card, .step-card').forEach(card => {
+        document.querySelectorAll('.feature-card').forEach(card => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
